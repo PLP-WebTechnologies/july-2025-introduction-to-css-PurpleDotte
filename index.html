@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Kota menu">
+        <link rel="stylesheet" href="styles.css">
+        <title>Menu</title>
+    </head>
+    <body>
+        <header>
+            <h1>Mnandi TakeAways</h1>
+            <nav arial-label="Main Navigation">
+                <a href="home.html">Home</a>
+                <a id="menu" href="#">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        
+        <main id="main">
+            <section>
+                <table>
+                    <thead>
+                        <caption><h2>Kota Menu</h2></caption>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Image"><img src="images/beef_kota.jpg" type="image" alt="beef kota" width="100" height="100" loading="lazy"></td>
+                            <td data-label="Name"> Beefy Bacon Kota</td>
+                            <td data-label="Description">Delicious beef patty and bacon with fries</td>
+                            <td data-label="Price">R70</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/rib_kota.jpg" type="image" alt="rib kota" width="100" height="100" loading="lazy"></td>
+                            <td>Rib Kota</td>
+                            <td>Double portion succulent ribs with fries and atchar</td>
+                            <td>R70</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/munchie_kota.jpg" type="image" alt="munchie kota" width="100" height="100" alt="beef kota" loading="lazy"></td>
+                            <td>Munchie Filler</td>
+                            <td>Our infamous munchie filler kota served with fries and mushroom sauce</td>
+                            <td>R80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <form>
+                    <fieldset>
+                        <legend>Order Form</legend>
+
+                        <!--customer information-->
+                        <label for="name">Full Name</label>
+                        <input id="name" type="text" name="name" placeholder="First Name" autocomplete="name" required>
+                        <input id="last_name" type="text" name="last_name" placeholder="Last Name">
+
+                        <label for="contact">Contact Details</label>
+                        <input id="email" type="email" name="email" placeholder="Email" autocomplete="email">
+                        <input id="phone_number" type="tel" name="phone_number" placeholder="Phone Number" required>
+
+                        <!--customer order-->
+                        <label for="order-id">Order ID: </label>
+                        <input id="order_id" type="text" value="F01234567" readonly>
+
+                        <!--dropdown list-->
+                        <label for="food">Meal:</label>
+                        <select id="food" required>
+                            <option value="beefy_bacon">Beefy Bacon Kota</option>
+                            <option value="rib">Rib Kota</option>
+                            <option value="munchie_filler">Munchie Filler Kota</option>
+                        </select>
+
+                        <!--unordered list-->
+                        <p id="order_type">Order Type:</p>
+                        <ul style="list-style-type: none;">
+                            <li>
+                                <label>
+                                    <input type="radio" name="main" value="delivery">Delivery
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="main" value="pick_up">Pick-up
+                                </label>
+                            </li>
+                        </ul>
+                
+                        <!--delivery details-->
+                        <label for="address">Address</label>
+                        <input type="text" name="street_address" placeholder="Street Address" required>
+                        <input type="text" name="suburb" placeholder="Suburb" required>
+                        <input type="text" name="postal_code" placeholder="Postal Code" required>
+
+                        <!--special instructions-->
+                        <label for="instructions">Special Instructions:</label>
+                        <textarea id="instructions" maxlength="200" placeholder="Max 200 characters"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Thank you for exploring our kitchen.</p>
+            <p>&copy; 2025 Mnandi TakeAways. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
